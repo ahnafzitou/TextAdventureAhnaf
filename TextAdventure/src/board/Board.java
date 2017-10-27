@@ -8,6 +8,6 @@ public class Board
 
 public Board(Room[][] shipMap)
 {
-	
+	this.shipMap = shipMap;
 }
 }
