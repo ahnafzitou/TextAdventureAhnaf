@@ -2,7 +2,7 @@ package room;
 
 public abstract class Room 
 	{
-		private String type;
+		private static String type;
 		private Items[] item;
 		private Clues[] clue;
 		public boolean visited;
@@ -14,11 +14,14 @@ public abstract class Room
 			this.clue = clue;
 			this.visited = false;
 		}
-		public String getType()
+		
+		public Room assignType()
 		{
-			for(int i = 0; i < type.length; i++)
+			int i = 0;
+			while(Room.type != "")
 			{
-				Room.type =  type[i];
+				Room.type =
+				i++;
 			}
 		}
 
