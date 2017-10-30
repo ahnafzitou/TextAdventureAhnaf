@@ -4,7 +4,7 @@ import items.Clue;
 public class battleRoom implements Room
 {
 	private String type;
-	private Clue clue;
+	private static String clue;
 	private String item;
 	private boolean visited;
 	
@@ -23,7 +23,7 @@ public class battleRoom implements Room
 	{
 		this.clue = Clue.assignType();
 	}
-	public static String analyzeClue()
+	public String analyzeClue()
 	{
 		return battleRoom.clue.getClue();
 	}
