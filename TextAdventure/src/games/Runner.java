@@ -1,7 +1,7 @@
 package games;
 import item.Items;
 import room.*;
-import clue.Clues;
+import item.Clues;
 
 public class Runner 
 {
@@ -13,7 +13,7 @@ public class Runner
         	Room[] row = map[j];
             for (int i = 0; i<row.length;i++)
             {
-                String[] type = {"Office","Closet","Restroom","Dorm","Cafeteria","Jailcell","Cargohold","BattleStations"};
+                String[] type = {};
                 Clues[] clue = {};
                 Items[] item = {};
 

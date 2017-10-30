@@ -10,4 +10,24 @@ public Board(Room[][] shipMap)
 {
 	this.shipMap = shipMap;
 }
+public void printMap()
+{
+
+
+    for(Room[] row : shipMap)
+    {
+        for (Room room : row)
+        {
+            room.print();
+        }
+        System.out.println();
+    }
+}
+public Room[][] getshipMap() {
+    return shipMap;
+}
+
+public void setSchoolMap(Room[][] schoolMap) {
+    this.shipMap = schoolMap;
+}
 }
