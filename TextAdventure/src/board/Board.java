@@ -27,7 +27,7 @@ public Room[][] getshipMap() {
     return shipMap;
 }
 
-public void setSchoolMap(Room[][] schoolMap) {
-    this.shipMap = schoolMap;
+public void setShipMap(Room[][] shipMap) {
+    this.shipMap = shipMap;
 }
 }

@@ -3,7 +3,7 @@ import ultilities.utilities;
 
 public class Clue 
 {
-	private static abstract String type;
+	private static String type;
 	public Clue(String type, String clue)
 	{
 		this.type = type;
@@ -13,6 +13,7 @@ public class Clue
 		String[] itemType = {"Bullets","Blood","Body","Name Tag"};
 		int x = utilities.randomType();
 		Clue.type = itemType[x];
+		return Clue.type;
 	}
 	public static String getClue()
 	{
@@ -29,10 +30,7 @@ public class Clue
 		{
 			return "This is the body of " +  deadPeople[1] + "." ;
 		}
-		else if(Clue.type.equals("Name Tag"))
-		{
-			return "This is the name tag of " + deadPeople[1] + ".";
-		}
+		return "This is the name tag of " + deadPeople[1] + ".";
 		
 	}
 

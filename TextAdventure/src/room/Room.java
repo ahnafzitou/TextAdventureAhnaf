@@ -3,8 +3,9 @@ package room;
 public abstract interface Room 
 	{
 		private String getType();
-		private String discoverItem();
+		private void discoverItem();
 		private String analyzeClue();
 		private boolean isVisited();
+		public abstract void print();
 
 	}

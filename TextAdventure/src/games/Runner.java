@@ -1,7 +1,8 @@
 package games;
-import item.Items;
+import items.Item;
 import room.*;
-import item.Clues;
+import items.Clue;
+import room.battleRoom;
 
 public class Runner 
 {
@@ -13,11 +14,10 @@ public class Runner
         	Room[] row = map[j];
             for (int i = 0; i<row.length;i++)
             {
-                String[] type = {};
-                Clues[] clue = {};
-                Items[] item = {};
+                Clue[] clue = {};
+                Item[] item = {};
+                row[i] = new battleRoom(type,clue,item,i,j);
 
-                row[i] = new Hallway(type,item,clue);
             }
 
         }
