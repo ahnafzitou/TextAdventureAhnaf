@@ -20,7 +20,6 @@ public class utilities
 	public static Room chooseRoom(int x, int y)
 	{
 		String type = "";
-		//String [] clueType = {"Bullets","Blood","Body","Name Tag"};
         Clue clue = null;
         Item item = null;
         int z = (int) (Math.floor(Math.random()*3));

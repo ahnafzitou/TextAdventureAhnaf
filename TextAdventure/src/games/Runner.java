@@ -63,7 +63,7 @@ public class Runner
             }
             else if(input.equals("clue"))
             {
-            	(map[Player.getX()][Player.getY()].getType()).analyzeClue();
+            	map[Player.getX()][Player.getY()].analyzeClue();
             }
             ship.printMap();
             
