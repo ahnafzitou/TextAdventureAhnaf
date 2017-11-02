@@ -62,18 +62,14 @@ public class Runner
             	Player.move("right");
             }
             ship.printMap();
+            if(map[Player.getX()][Player.getY()].getType().equals(""))
+            {
+            	System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
+            }
             //print array with print()
 
            // gameOn = false;
-            
-
-
-
-
-
-
-
-        }
+       }
     }
 
 
