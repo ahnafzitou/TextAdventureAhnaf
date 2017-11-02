@@ -1,5 +1,6 @@
 package room;
 import items.Clue;
+import items.Monster;
 import items.Item;
 public class battleRoom implements Room
 {
@@ -53,6 +54,10 @@ public class battleRoom implements Room
 	public String print() 
 	{
 		return "[X]";
+	}
+	public void spawnMonster()
+	{
+		String type = 
 	}
 
 	
