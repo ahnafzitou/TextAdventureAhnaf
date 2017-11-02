@@ -40,9 +40,9 @@ public class Runner
         boolean gameOn = true;
         Player player1 = new Player(10,true,0,0);
         Scanner in = new Scanner(System.in);
+        System.out.println("We have recieved word that there have been strange things happening on this ship we need you to go take a look.");
         while(gameOn)
         {
-            System.out.println("We have recieved word that there have been strange things happening on this ship we need you to go take a look.");
             System.out.println("\nType to move in a direction.");
             String input = in.nextLine();
             if(input.equals("up") && Player.canMove("up"))
@@ -62,10 +62,9 @@ public class Runner
             	Player.move("right");
             }
             ship.printMap();
-            if(map[Player.getX()][Player.getY()].getType().equals(""))
-            {
-            	System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
-            }
+            
+            System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
+            
             //print array with print()
 
            // gameOn = false;
