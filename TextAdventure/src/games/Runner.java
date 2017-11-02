@@ -62,6 +62,7 @@ public class Runner
             	Player.move("right");
             }
             ship.printMap();
+            //print array with print()
 
            // gameOn = false;
             
