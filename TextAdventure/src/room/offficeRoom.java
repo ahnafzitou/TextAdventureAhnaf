@@ -21,7 +21,7 @@ public class offficeRoom implements Room
 	}
 	public String getType()
 	{
-		return "";
+		return "Office";
 	}
 	public static void clue()
 	{

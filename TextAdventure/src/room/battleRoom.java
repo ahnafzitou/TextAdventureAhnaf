@@ -19,7 +19,7 @@ public class battleRoom implements Room
 	}
 	public String getType()
 	{
-		return "";
+		return "Battle";
 	}
 	public static void clue()
 	{
