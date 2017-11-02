@@ -55,9 +55,10 @@ public class battleRoom implements Room
 	{
 		return "[X]";
 	}
-	public void spawnMonster()
+	public Monster spawnMonster()
 	{
-		String type = 
+		String type = Monster.assignType();
+		return new Monster(type,3,true);
 	}
 
 	
