@@ -30,5 +30,25 @@ public class Player
 			y += 1;
 		}
 	}
+	public static boolean canMove(String str)
+	{
+		if(str == "up")
+		{
+			return(x != 0);
+		}
+		else if(str == "down")
+		{
+			return(x != 4);
+		}
+		else if(str == "left")
+		{
+			return(y != 0);
+		}
+		else
+		{
+			return(y != 4);
+		}
+	}
+	
 
 }
