@@ -54,12 +54,6 @@ public class battleRoom implements Room
 	{
 		return "[X]";
 	}
-	@Override
-	public void addOccupants() 
-	{
-		
-		
-	}
 
 	
 
