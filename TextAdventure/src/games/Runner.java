@@ -45,9 +45,21 @@ public class Runner
             System.out.println("We have recieved word that there have been strange things happening on this ship we need you to go take a look.");
             System.out.println("\nType to move in a direction.");
             String input = in.nextLine();
-            if(input = "up")
+            if(input.equals("up") && Player.canMove("up"))
             {
-            	
+            	Player.move("up");
+            }
+            else if(input.equals("down") && Player.canMove("down"))
+            {
+            	Player.move("down");
+            }
+            else if(input.equals("left") && Player.canMove("left"))
+            {
+            	Player.move("left");
+            }
+            else if(input.equals("right") && Player.canMove("right"))
+            {
+            	Player.move("right");
             }
             ship.printMap();
 

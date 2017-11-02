@@ -32,15 +32,15 @@ public class Player
 	}
 	public static boolean canMove(String str)
 	{
-		if(str == "up")
+		if(str.equals("up"))
 		{
 			return(x != 0);
 		}
-		else if(str == "down")
+		else if(str.equals("down"))
 		{
 			return(x != 4);
 		}
-		else if(str == "left")
+		else if(str.equals("left"))
 		{
 			return(y != 0);
 		}
