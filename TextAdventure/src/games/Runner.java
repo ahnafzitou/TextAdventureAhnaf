@@ -61,6 +61,10 @@ public class Runner
             {
             	Player.move("right");
             }
+            else if(input.equals("clue"))
+            {
+            	(map[Player.getX()][Player.getY()].getType()).analyzeClue();
+            }
             ship.printMap();
             
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");

@@ -25,7 +25,7 @@ public void printMap()
 			{
 				System.out.print(shipMap[i][j].print());
 			}
-			if(j == 5)
+			if(!(j < 4))
 			{
 				System.out.print("\n");
 			}
