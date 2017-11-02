@@ -1,4 +1,5 @@
 package board;
+import items.Player;
 import room.Room;
 
 public class Board 
@@ -16,13 +17,17 @@ public void printMap()
 	{
 		for(int j = 0; j < shipMap.length; j++)
 		{
-			if(j < 4)
+			if(shipMap[i][j] == shipMap[Player.getX()][Player.getY()])
 			{
-				System.out.print(shipMap[i][j].print());
+				System.out.print("[i]");
 			}
 			else
 			{
-				System.out.print(shipMap[i][j].print() + "\n");
+				System.out.print(shipMap[i][j].print());
+			}
+			if(j == 5)
+			{
+				System.out.print("\n");
 			}
 		}
 		
