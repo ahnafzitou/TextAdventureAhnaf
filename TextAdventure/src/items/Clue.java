@@ -1,20 +1,21 @@
 package items;
 import ultilities.utilities;
 
-public class Clue 
+public class Clue extends Item
 {
 	private static String type;
-	public Clue(String type, String clue)
+	public Clue(String type)
 	{
+		super(type);
 		this.type = type;
 	}
-	public static String assignType()
+	/*public static String assignType()
 	{
 		String[] itemType = {"Bullets","Blood","Body","Name Tag"};
 		int x = utilities.randomType();
 		Clue.type = itemType[x];
 		return Clue.type;
-	}
+	}*/
 	public static String getClue()
 	{
 		String[] deadPeople = {"Sidney Phillips","Jason Zhang","Mr.Levin","Ahnaf Zitou","Sadman Hossain"};

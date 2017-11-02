@@ -2,12 +2,16 @@ package items;
 
 import ultilities.utilities;
 
-public class Monster 
+public class Monster
 {
 	private static String type;
-	public Monster(String type, String clue)
+	private static int damage;
+	private static boolean alive;
+	public Monster(String type, int damage, boolean alive)
 	{
 		this.type = type;
+		this.damage = damage;
+		this.alive = alive;
 	}
 	public static String assignType()
 	{
@@ -16,5 +20,11 @@ public class Monster
 		Monster.type = itemType[x];
 		return Monster.type;
 	}
+	public void createMonster()
+	{
+		Monster.damage = (int) Math.floor(3 * Math.random());
+		Monster.alive = false;
+	}
+	
 
 }

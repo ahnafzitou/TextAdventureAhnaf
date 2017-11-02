@@ -27,7 +27,8 @@ public class battleRoom implements Room
 	}
 	public String analyzeClue()
 	{
-		return this.clue.getClue();
+		
+		return battleRoom.clue.getClue();
 	}
 
 	public void discoverItem() 
@@ -49,9 +50,15 @@ public class battleRoom implements Room
 	     return y;
 	 }
 	@Override
-	public String print() {
-		// TODO Auto-generated method stub
-		return null;
+	public String print() 
+	{
+		return "[X]";
+	}
+	@Override
+	public void addOccupants() 
+	{
+		
+		
 	}
 
 	

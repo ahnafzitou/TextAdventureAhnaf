@@ -4,7 +4,7 @@ import ultilities.utilities;
 public class Item 
 {
 		private static String type;
-		public Item(String type, String clue)
+		public Item(String type)
 		{
 			this.type = type;
 		}

@@ -51,9 +51,9 @@ public class offficeRoom implements Room
 	     return y;
 	 }
 	@Override
-	public String print() {
-		// TODO Auto-generated method stub
-		return null;
+	public String print() 
+	{
+		return "[X]";
 	}
 
 }
