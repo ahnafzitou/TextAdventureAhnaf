@@ -14,8 +14,9 @@ public class Runner
         	Room[] row = map[j];
             for (int i = 0; i<row.length;i++)
             {
-                Clue[] clue = {};
-                Item[] item = {};
+            	String type = "";
+                Clue clue = null;
+                Item item = null;
                 row[i] = new battleRoom(type,clue,item,i,j);
 
             }

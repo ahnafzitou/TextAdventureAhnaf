@@ -48,10 +48,12 @@ public class battleRoom implements Room
 	 {
 	     return y;
 	 }
-	public abstract void print();
-	{
-		
+	@Override
+	public String print() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	
 
 }
