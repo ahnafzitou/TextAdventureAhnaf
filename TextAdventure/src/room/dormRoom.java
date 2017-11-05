@@ -29,7 +29,7 @@ public class dormRoom implements Room
 	}
 	public String analyzeClue()
 	{
-		return this.clue.getClue();
+		return dormRoom.clue.getClue();
 	}
 
 	public void discoverItem() 

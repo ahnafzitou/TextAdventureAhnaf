@@ -1,10 +1,10 @@
 package items;
-import ultilities.utilities;
+
 
 public class Clue extends Item
 {
-	private static String type;
-	public Clue(String type)
+	private static int type;
+	public Clue(int type)
 	{
 		super(type);
 		this.type = type;
@@ -19,15 +19,15 @@ public class Clue extends Item
 	public static String getClue()
 	{
 		String[] deadPeople = {"Sidney Phillips","Jason Zhang","Mr.Levin","Ahnaf Zitou","Sadman Hossain"};
-		if(Clue.type.equals("Bullets"))
+		if(Clue.type == 1)
 		{
 			return "These bullets seem to have been shot from some sort of high velocity weapon.";
 		}
-		else if(Clue.type.equals("Blood"))
+		else if(Clue.type == 2)
 		{
 			return "This blood seems to be human, but I don't see a body around.";
 		}
-		else if(Clue.type.equals("Body"))
+		else if(Clue.type == 3)
 		{
 			return "This is the body of " +  deadPeople[1] + "." ;
 		}

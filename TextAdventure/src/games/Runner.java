@@ -3,6 +3,8 @@ import room.Room;
 import ultilities.utilities;
 import board.Board;
 import java.util.Scanner;
+
+import items.Clue;
 import items.Player;
 
 
@@ -61,14 +63,10 @@ public class Runner
             {
             	Player.move("right");
             }
-            else if(input.equals("clue"))
-            {
-            	map[Player.getX()][Player.getY()].analyzeClue();
-            }
             ship.printMap();
             
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
-            
+            System.out.print(Clue.getClue());
             //print array with print()
 
            // gameOn = false;

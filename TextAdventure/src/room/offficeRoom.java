@@ -5,17 +5,11 @@ import items.Item;
 
 public class offficeRoom implements Room
 {
-	private String type;
-	private static Clue clue;
-	private static Item item;
 	private int x;
 	private int y;
 	
 	public offficeRoom(String type, Clue clue, Item item, int x,int y)
 	{
-		this.type = type;
-		this.clue = clue;
-		this.item = item;
 		this.x = x;
 		this.y = y;
 	}
@@ -25,16 +19,16 @@ public class offficeRoom implements Room
 	}
 	public static void clue()
 	{
-		offficeRoom.clue.assignType();
+		Clue.assignType();
 	}
 	public String analyzeClue()
 	{
-		return this.clue.getClue();
+		return Clue.getClue();
 	}
 
 	public void discoverItem() 
 	{
-		offficeRoom.item.assignType();
+		Item.assignType();
 	}
 	@Override
 	public boolean isVisited() {

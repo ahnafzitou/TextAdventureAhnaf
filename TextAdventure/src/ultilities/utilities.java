@@ -15,14 +15,14 @@ public class utilities
 	int y = 0;
 	public static int randomType()
 	{
-		return (int) Math.floor(10 * Math.random());
+		return (int) Math.floor(Math.random()*10);
 	}
 	public static Room chooseRoom(int x, int y)
 	{
-		String type = "";
+		String type = "Bullets";
         Clue clue = null;
         Item item = null;
-        int z = (int) (Math.floor(Math.random()*3));
+        int z = (int) (Math.floor(Math.random()*4));
         if(z == 0)
         {
         	return new battleRoom(type,clue,item,x,y);
