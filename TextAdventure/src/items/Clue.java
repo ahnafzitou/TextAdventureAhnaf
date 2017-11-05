@@ -7,7 +7,7 @@ public class Clue extends Item
 	public Clue(int type)
 	{
 		super(type);
-		this.type = type;
+		Clue.type = type;
 	}
 	/*public static String assignType()
 	{

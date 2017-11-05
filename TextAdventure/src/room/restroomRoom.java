@@ -5,17 +5,13 @@ import items.Item;
 
 public class restroomRoom implements Room
 {
-	private String type;
-	private static Clue clue;
-	private static Item item;
+
 	private int x;
 	private int y;
 	
 	public restroomRoom(String type, Clue clue, Item item, int x,int y)
 	{
-		this.type = type;
-		this.clue = clue;
-		this.item = item;
+
 		this.x = x;
 		this.y = y;
 	}
@@ -23,19 +19,7 @@ public class restroomRoom implements Room
 	{
 		return "Restroom";
 	}
-	public static void clue()
-	{
-		restroomRoom.clue.assignType();
-	}
-	public String analyzeClue()
-	{
-		return this.clue.getClue();
-	}
 
-	public void discoverItem() 
-	{
-		restroomRoom.item.assignType();
-	}
 	@Override
 	public boolean isVisited() {
 		// TODO Auto-generated method stub

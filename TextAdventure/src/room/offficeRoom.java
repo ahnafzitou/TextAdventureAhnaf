@@ -17,19 +17,7 @@ public class offficeRoom implements Room
 	{
 		return "Office";
 	}
-	public static void clue()
-	{
-		Clue.assignType();
-	}
-	public String analyzeClue()
-	{
-		return Clue.getClue();
-	}
-
-	public void discoverItem() 
-	{
-		Item.assignType();
-	}
+	
 	@Override
 	public boolean isVisited() {
 		// TODO Auto-generated method stub
