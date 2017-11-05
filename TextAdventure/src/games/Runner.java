@@ -64,13 +64,14 @@ public class Runner
             	Player.move("right");
             }
             ship.printMap();
-            
+            Clue temp = new Clue(utilities.randomType());
+            Monster mon = new Monster((int) Math.floor(Math.random()*4));
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
             if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
             {
-            	 System.out.print("You encountered an" + Monster.assignType() + ",");
+            	 System.out.print("You encountered an" + mon.assignType() + ",");
             }
-            System.out.print(Clue.getClue());
+            System.out.print(temp.getClue());
             //print array with print()
 
            // gameOn = false;
