@@ -40,7 +40,7 @@ public class Runner
         }
         Board ship = new Board(map);
         boolean gameOn = true;
-        Player player1 = new Player(10,true,0,0);
+        Player player1 = new Player(10,0,0);
         Scanner in = new Scanner(System.in);
         System.out.println("We have recieved word that there have been strange things happening on this ship we need you to go take a look.");
         while(gameOn)
@@ -67,15 +67,20 @@ public class Runner
             Clue temp = new Clue(utilities.randomType());
             Monster mon = new Monster((int) Math.floor(Math.random()*4));
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
+
             if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
             {
-            	 System.out.print("You encountered an" + mon.assignType() + "," + " you took" + mon.dealtdamage());
+            	player1.health = player1.health - mon.dealtdamage();
+            	System.out.print("You encountered an" + mon.assignType() + "," + " you took" + mon.dealtdamage() + ", your health is at" + player1.health );
             }
             System.out.print(temp.getClue());
             //print array with print()
-
-           // gameOn = false;
-       }
+            if(player1.health <= 0)
+            {
+            	gameOn = false;
+            }
+        }
+        System.out.print("You are dead");
     }
 
 

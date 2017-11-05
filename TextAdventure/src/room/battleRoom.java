@@ -19,11 +19,6 @@ public class battleRoom implements Room
 		return "Battle";
 	}
 
-	@Override
-	public boolean isVisited() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 	 public int getX()
 	 {
 		 return x;

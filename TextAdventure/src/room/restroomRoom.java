@@ -20,11 +20,7 @@ public class restroomRoom implements Room
 		return "Restroom";
 	}
 
-	@Override
-	public boolean isVisited() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 	 public int getX()
 	 {
 		 return x;

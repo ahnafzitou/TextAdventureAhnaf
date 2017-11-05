@@ -19,12 +19,8 @@ public class dormRoom implements Room
 	{
 		return "Dorm";
 	}
-	@Override
-	public boolean isVisited() 
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
+
 	 public int getX()
 	 {
 		 return x;

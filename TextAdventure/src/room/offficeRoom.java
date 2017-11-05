@@ -18,11 +18,7 @@ public class offficeRoom implements Room
 		return "Office";
 	}
 	
-	@Override
-	public boolean isVisited() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 	 public int getX()
 	 {
 		 return x;
