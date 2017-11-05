@@ -5,6 +5,7 @@ import board.Board;
 import java.util.Scanner;
 
 import items.Clue;
+import items.Item;
 import items.Player;
 import items.Monster;
 
@@ -40,12 +41,14 @@ public class Runner
         }
         Board ship = new Board(map);
         boolean gameOn = true;
+        boolean finale = false;
+        int finaleReady = 0;
         Player player1 = new Player(10,0,0);
         Scanner in = new Scanner(System.in);
         System.out.println("We have recieved word that there have been strange things happening on this ship we need you to go take a look.");
         while(gameOn)
         {
-            System.out.println("\nType to move in a direction.");
+            System.out.println("\nType up,down,left, or right move in a direction.");
             String input = in.nextLine();
             if(input.equals("up") && Player.canMove("up"))
             {
@@ -63,22 +66,49 @@ public class Runner
             {
             	Player.move("right");
             }
-            ship.printMap();
+            ship.printMap(); 
             Clue temp = new Clue(utilities.randomType());
             Monster mon = new Monster((int) Math.floor(Math.random()*4));
-            System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
-
+            Item i = new Item(utilities.randomType());
+            System.out.println("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
+            System.out.println(temp.getClue());
+            System.out.println(i.getItem());
             if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
             {
             	player1.health = player1.health - mon.dealtdamage();
-            	System.out.print("You encountered an" + mon.assignType() + "," + " you took" + mon.dealtdamage() + ", your health is at" + player1.health );
+            	System.out.println("You encountered an " + mon.assignType() + "," + " you took " + mon.dealtdamage() + " damage, your health is at " + player1.health );
             }
-            System.out.print(temp.getClue());
+            finaleReady++;
+            if(finaleReady == 8)
+            {
+            	System.out.println("I think I know how to access the final room. Type finale to enter that room");
+            }
+            if(input.equals("finale"))
+            {
+            	gameOn = false;
+            	finale = true;
+            }
             //print array with print()
             if(player1.health <= 0)
             {
             	gameOn = false;
             }
+        }
+        while(finale)
+        {
+        	System.out.println("");
+        	System.out.println("");
+        	System.out.println("");
+        	System.out.println("You fidget with the door and the items you collect eventually opening it");
+        	Monster end = new Monster(20,"");
+        	System.out.println("You come accross a gigantic alien about 8 feet tall standing in the middle of the room. It is looking through folders of information, every few folders it will pick up a device and scan the folder");
+        	System.out.println("It turns to you");
+        	System.out.println("SO THE HUMANS KNOW NOW, WELL THAT IS QUITE A SHAME. HMMM ARE YOU ALONE?");
+        	System.out.println("You grip your gun waiting for any move from the beast");
+        	System.out.println("You hear a strange noise like the sound of air moving quickly through pipes. Then out of the fingertips of the alien you see white sparks before that is all you can see as you are consumed by them.");
+        	player1.health = player1.health - end.dealtdamage();
+        	System.out.println("You encountered an Alien Warlock" + "," + " you took " + end.dealtdamage() + ", your health is at " + player1.health );
+        	finale = false;
         }
         System.out.print("You are dead");
     }

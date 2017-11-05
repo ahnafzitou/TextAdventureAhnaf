@@ -33,5 +33,10 @@ public class offficeRoom implements Room
 	{
 		return "[X]";
 	}
+	@Override
+	public int setItem() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

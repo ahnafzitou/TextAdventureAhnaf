@@ -5,10 +5,16 @@ import ultilities.utilities;
 public class Monster
 {
 	private static int damage;
+	private String statement;
 	public Monster(int damage)
 	{
 		this.damage = damage;
 
+	}
+	public Monster(int damage,String statement)
+	{
+		this.damage = 20;
+		this.statement = "";
 	}
 	public static String assignType()
 	{
@@ -19,6 +25,10 @@ public class Monster
 	public int dealtdamage()
 	{
 		return Monster.damage;
+	}
+	public String findOut()
+	{
+		return "";
 	}
 	
 	

@@ -35,5 +35,10 @@ public class restroomRoom implements Room
 	{
 		return "[X]";
 	}
+	@Override
+	public int setItem() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

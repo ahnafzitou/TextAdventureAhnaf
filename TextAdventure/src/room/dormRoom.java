@@ -19,7 +19,6 @@ public class dormRoom implements Room
 	{
 		return "Dorm";
 	}
-	
 
 	 public int getX()
 	 {
@@ -34,6 +33,11 @@ public class dormRoom implements Room
 	public String print() 
 	{
 		return "[X]";
+	}
+	@Override
+	public int setItem() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 
