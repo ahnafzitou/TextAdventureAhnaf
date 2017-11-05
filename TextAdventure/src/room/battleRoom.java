@@ -8,7 +8,7 @@ public class battleRoom implements Room
 	private int x;
 	private int y;
 	
-	public battleRoom(String type, Clue clue, Item item, int x,int y)
+	public battleRoom(int x,int y)
 	{
 
 		this.x = x;

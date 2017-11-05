@@ -8,7 +8,7 @@ public class offficeRoom implements Room
 	private int x;
 	private int y;
 	
-	public offficeRoom(String type, Clue clue, Item item, int x,int y)
+	public offficeRoom(int x,int y)
 	{
 		this.x = x;
 		this.y = y;

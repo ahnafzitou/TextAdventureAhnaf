@@ -19,25 +19,22 @@ public class utilities
 	}
 	public static Room chooseRoom(int x, int y)
 	{
-		String type = "Bullets";
-        Clue clue = null;
-        Item item = null;
         int z = (int) (Math.floor(Math.random()*4));
         if(z == 0)
         {
-        	return new battleRoom(type,clue,item,x,y);
+        	return new battleRoom(x,y);
         }
         else if(z == 1)
         {
-        	return new offficeRoom(type,clue,item,x,y);
+        	return new offficeRoom(x,y);
         }
         else if(z == 2)
         {
-        	return new dormRoom(type,clue,item,x,y);
+        	return new dormRoom(x,y);
         }
         else
         {
-        	return new restroomRoom(type,clue,item,x,y);
+        	return new restroomRoom(x,y);
         }
 	}
 }

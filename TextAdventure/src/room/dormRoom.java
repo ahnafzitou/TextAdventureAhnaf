@@ -9,7 +9,7 @@ public class dormRoom implements Room
 	private int x;
 	private int y;
 	
-	public dormRoom(String type, Clue clue, Item item, int x,int y)
+	public dormRoom(int x,int y)
 	{
 
 		this.x = x;
