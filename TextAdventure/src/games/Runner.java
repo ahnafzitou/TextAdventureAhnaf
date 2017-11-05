@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import items.Clue;
 import items.Player;
-
+import items.Monster;
 
 public class Runner 
 {
@@ -66,6 +66,10 @@ public class Runner
             ship.printMap();
             
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
+            if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
+            {
+            	 System.out.print("You encountered an" + Monster.assignType() + ",");
+            }
             System.out.print(Clue.getClue());
             //print array with print()
 

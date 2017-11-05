@@ -20,7 +20,8 @@ public class dormRoom implements Room
 		return "Dorm";
 	}
 	@Override
-	public boolean isVisited() {
+	public boolean isVisited() 
+	{
 		// TODO Auto-generated method stub
 		return false;
 	}
