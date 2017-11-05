@@ -15,7 +15,7 @@ public class utilities
 	int y = 0;
 	public static int randomType()
 	{
-		return (int) Math.floor(Math.random()*10);
+		return (int) Math.floor(Math.random()*4);
 	}
 	public static Room chooseRoom(int x, int y)
 	{
