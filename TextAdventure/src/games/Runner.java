@@ -69,7 +69,7 @@ public class Runner
             System.out.print("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
             if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
             {
-            	 System.out.print("You encountered an" + mon.assignType() + ",");
+            	 System.out.print("You encountered an" + mon.assignType() + "," + " you took" + mon.dealtdamage());
             }
             System.out.print(temp.getClue());
             //print array with print()

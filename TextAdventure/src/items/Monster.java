@@ -16,6 +16,10 @@ public class Monster
 		int x = utilities.randomType();
 		return itemType[x];
 	}
+	public int dealtdamage()
+	{
+		return Monster.damage;
+	}
 	
 	
 
