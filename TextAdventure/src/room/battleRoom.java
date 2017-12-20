@@ -1,6 +1,7 @@
 package room;
 import items.Clue;
 import items.Monster;
+import ultilities.utilities;
 import items.Item;
 public class battleRoom implements Room
 {
@@ -34,9 +35,14 @@ public class battleRoom implements Room
 		return "[X]";
 	}
 	@Override
-	public int setItem() {
-		// TODO Auto-generated method stub
-		return 0;
+	public String setItem() {
+		Item i = new Item(utilities.randomType());
+		return i.getItem();
+	}
+	@Override
+	public String getClue() {
+		Clue temp = new Clue(utilities.randomType());
+		return temp.getClue();
 	}
 
 	

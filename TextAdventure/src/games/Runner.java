@@ -67,12 +67,11 @@ public class Runner
             	Player.move("right");
             }
             ship.printMap(); 
-            Clue temp = new Clue(utilities.randomType());
+            Room theRoom = map[Player.getX()][Player.getY()];
             Monster mon = new Monster((int) Math.floor(Math.random()*4));
-            Item i = new Item(utilities.randomType());
-            System.out.println("You entered a " + map[Player.getX()][Player.getY()].getType() + "room");
-            System.out.println(temp.getClue());
-            System.out.println(i.getItem());
+            System.out.println("You entered a " + theRoom.getType() + "room");
+            System.out.println(theRoom.getClue());
+            System.out.println(theRoom.setItem());
             if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
             {
             	player1.health = player1.health - mon.dealtdamage();

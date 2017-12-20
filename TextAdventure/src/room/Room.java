@@ -1,9 +1,11 @@
 package room;
 
+
 public abstract interface Room 
 	{
 		public abstract String getType();
-		public abstract int setItem();
+		public abstract String setItem();
+		public abstract String getClue();
 		public abstract String print();
 
 	}

@@ -16,7 +16,7 @@ public class Clue extends Item
 		Clue.type = itemType[x];
 		return Clue.type;
 	}*/
-	public static String getClue()
+	public String getClue()
 	{
 		String[] deadPeople = {"Sidney Phillips","Jason Zhang","Mr.Levin","Ahnaf Zitou","Sadman Hossain","John Cena","Taylor Swift","Batman","Lebron James"};
 		int y = (int) Math.floor(Math.random()*8);
