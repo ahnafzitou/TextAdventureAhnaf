@@ -42,6 +42,7 @@ public class Runner
         Board ship = new Board(map);
         boolean gameOn = true;
         boolean finale = false;
+        boolean valid = true;
         int finaleReady = 0;
         Player player1 = new Player(10,0,0);
         Scanner in = new Scanner(System.in);
@@ -50,48 +51,56 @@ public class Runner
         {
             System.out.println("\nType up,down,left, or right move in a direction.");
             String input = in.nextLine();
-            if(input.equals("up") && Player.canMove("up"))
-            {
-            	Player.move("up");
-            }
-            else if(input.equals("down") && Player.canMove("down"))
-            {
-            	Player.move("down");
-            }
-            else if(input.equals("left") && Player.canMove("left"))
-            {
-            	Player.move("left");
-            }
-            else if(input.equals("right") && Player.canMove("right"))
-            {
-            	Player.move("right");
-            }
-            ship.printMap(); 
-            Room theRoom = map[Player.getX()][Player.getY()];
-            Monster mon = new Monster((int) Math.floor(Math.random()*4));
-            System.out.println("You entered a " + theRoom.getType() + "room");
-            System.out.println(theRoom.getClue());
-            System.out.println(theRoom.setItem());
-            if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
-            {
-            	player1.health = player1.health - mon.dealtdamage();
-            	System.out.println("You encountered an " + mon.assignType() + "," + " you took " + mon.dealtdamage() + " damage, your health is at " + player1.health );
-            }
-            finaleReady++;
-            if(finaleReady == 8)
-            {
-            	System.out.println("I think I know how to access the final room. Type finale to enter that room");
-            }
-            if(input.equals("finale"))
-            {
-            	gameOn = false;
-            	finale = true;
-            }
-            //print array with print()
-            if(player1.health <= 0)
-            {
-            	gameOn = false;
-            }
+	         	if(input.equals("up") && Player.canMove("up"))
+	            {
+	            	Player.move("up");
+	            }
+	            else if(input.equals("down") && Player.canMove("down"))
+	            {
+	            	Player.move("down");
+	            }
+	            else if(input.equals("left") && Player.canMove("left"))
+	            {
+	            	Player.move("left");
+	            }
+	            else if(input.equals("right") && Player.canMove("right"))
+	            {
+	            	Player.move("right");
+	            }
+	            else
+	            {
+	            	valid = false;
+	            }
+	         if(valid == true)
+	         {
+	            ship.printMap(); 
+	            Room theRoom = map[Player.getX()][Player.getY()];
+	            Monster mon = new Monster((int) Math.floor(Math.random()*4));
+	            System.out.println("You entered a " + theRoom.getType() + "room");
+	            System.out.println(theRoom.getClue());
+	            System.out.println(theRoom.setItem());
+	            if(map[Player.getX()][Player.getY()].getType().equals("Battle"))
+	            {
+	            	player1.health = player1.health - mon.dealtdamage();
+	            	System.out.println("You encountered an " + mon.assignType() + "," + " you took " + mon.dealtdamage() + " damage, your health is at " + player1.health );
+	            }
+	            finaleReady++;
+	            if(finaleReady == 8)
+	            {
+	            	System.out.println("I think I know how to access the final room. Type finale to enter that room");
+	            }
+	            if(input.equals("finale"))
+	            {
+	            	gameOn = false;
+	            	finale = true;
+	            }
+	            //print array with print()
+	            if(player1.health <= 0)
+	            {
+	            	gameOn = false;
+	            }
+	         }
+	         valid = true;
         }
         while(finale)
         {
@@ -111,6 +120,7 @@ public class Runner
         }
         System.out.print("You are dead");
     }
+	
 
 
 }
